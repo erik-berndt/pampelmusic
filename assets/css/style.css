@@ -1,0 +1,584 @@
+html, body {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+}
+
+body {
+	background-image: url('../images/otherBackgrounds/bg8.jpg');
+	background-color: #181818;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	font-size: 14px;
+	min-width: 720px;
+}
+
+* {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #fff;
+	letter-spacing: 1px;
+}
+
+#nowPlayingBarContainer {
+	width: 100%;
+	position: fixed;
+	background-color: rgb(40,40,40);
+	bottom: 0px;
+	min-width: 620px;
+}
+
+#nowPlayingBar {
+	height: 120px;
+	display: flex;
+	padding: 16px;
+	box-sizing: border-box;
+}
+
+#nowPlayingLeft,
+#nowPlayingRight {
+	width: 30%;
+	min-width: 180px;
+}
+
+#nowPlayingRight {
+	margin-top: 16px;
+}
+
+#nowPlayingCenter {
+	width: 40%;
+	max-width: 800px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#nowPlayingBar .content {
+	width: 100%;
+	height: 90px;
+}
+
+.playerControls .buttons {
+	margin: 0 auto;
+	display: table;
+}
+
+.controlButton {
+	padding: 10px 20px;
+	background-color: transparent;
+	border: none;
+	vertical-align: middle;
+}
+.controlButton.volume {
+	padding: 0;
+}
+
+.controlButton img {
+	width: 30px;
+	height: 30px;
+}
+
+.controlButton:hover {
+	cursor: pointer;
+}
+
+.progressTime {
+	padding: 0 10px;
+	color: #ddd;
+	font-size: 16px;
+	min-width: 40px;
+	text-align: center;
+}
+
+.progressTime.remaining {
+	margin-left: 5px;
+}
+
+.playbackBar {
+	display: flex;
+}
+
+.progressBar {
+	margin-top: 5px;
+	width: 100%;
+	height: 12px;
+	display: inline-flex;
+	cursor: pointer;
+}
+
+.progressBarBg {
+	background-color: #404040;
+	height: 8px;
+	border-radius: 6px;
+	width: 100%;
+}
+
+.progress {
+	background-color:#748f7c;
+	height: 8px;
+	border-radius: 6px;
+	width: 0;
+	transition: width 0.1s linear;	
+}
+
+.playbackBar .progressBar {
+	margin-top: 3px;
+}
+
+#nowPlayingLeft .albumArtwork {
+	height: 100%;
+	max-width: 90px;
+	background-size: cover;
+	margin-right: 15px;
+	float: left;
+}
+
+.trackInfo {
+	display: table;
+}
+
+#nowPlayingLeft .trackInfo .genreName span {
+	color: #a0a0a0;
+	font-size: 12px;
+	width: 100%;
+	display: inline-block;
+	margin: 20px 0;
+}
+
+#nowPlayingLeft .trackInfo .trackName {
+	width: 100%;
+	display: inline-block;
+	margin: 6px 0;
+}
+
+#nowPlayingLeft .trackInfo .artistName span {
+	color: #a0a0a0;
+	font-size: 14px;
+}
+
+.volumeBar {
+	width: 180px;
+	position: absolute;
+    right: 0;
+}
+
+.volumeBar .progressBar {
+	width: 125px;
+}
+
+#topContainer {
+	min-height: 100%;
+	width: 100%;
+}
+
+#navBarContainer {
+	background-color: rgba(0, 0, 0, 0.3);;
+	width: 220px;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.navBar {
+	padding: 25px;
+	display: flex;
+	flex-direction: column;
+	-ms-flex-direction: column;
+}
+
+.logo img {
+	width: 60px;
+	margin-bottom: 15px;
+}
+
+.navBar .group {
+	border-top: 1px solid #a0a0a0;
+	padding: 10px;
+}
+
+.navItem {
+	padding: 10px 0;
+	font-size: 14px;
+	font-weight: 700;
+	position: relative;
+	display: block;
+	letter-spacing: 1px;
+}
+
+.navItem img {
+	width: 100%;
+    margin: 20px 0;
+    border-radius: 20px;
+}
+
+.navItemLink {
+	text-decoration: none;
+	color: #a0a0a0;
+}
+
+.navItemLink:hover {
+	color: #fff;
+}
+
+.navItemLink .icon {
+	width: 35px;
+	position: absolute;
+	top: -29px;
+	right: 0;
+}
+
+#mainViewContainer {
+	margin-left: 220px;
+	padding-bottom: 120px;
+	width: calc(100% - 220px);
+}
+
+#mainContent {
+	padding: 0 20px;
+}
+
+.pageHeadingBig {
+	padding: 20px;
+	text-align: center;
+}
+
+.gridViewItem {
+	display: inline-block;
+	margin-right: 20px;
+	width: 29%;
+	max-width: 217px;
+	min-width: 150px;
+	margin-bottom: 20px;
+}
+
+.gridViewItem img {
+	width: 100%;
+}
+
+.gridViewInfo {
+	font-weight: 300;
+	text-align: center;
+	padding: 5px 0;
+	text-overflow: ellipsis;
+    overflow: hidden;
+	white-space: nowrap;
+}
+
+.gridViewInfo2 {
+	background-color: rgba( 80,80,80,0.3);
+	font-weight: 800;
+	font-size: 16px;
+	text-align: center;
+	padding: 10px 5px;
+	/* border: 1px solid #939393; */
+	border-radius: 20px;
+	text-overflow: ellipsis;
+    overflow: hidden;
+	white-space: nowrap;
+}
+.gridViewInfo2:hover {
+	background-color: #333;
+}
+
+.gridViewItem a {
+	text-decoration: none;
+}
+
+.entityInfo {
+	padding: 40px 0 10px 0;
+	display: inline-block;
+	width: 100%;
+}
+
+.entityInfo .leftSection {
+	width: 30%;
+    float: left;
+	max-width: 250px;
+}
+
+.entityInfo .leftSection img {
+	width: 100%;
+}
+
+.entityInfo .rightSection {
+	width: 70%;
+	float: left;
+	padding: 5px 10px 5px 40px;
+	box-sizing: border-box;
+}
+
+.entityInfo .rightSection h2 {
+	margin-top: 0px;
+}
+
+.entityInfo .rightSection p {
+	color: #fff;
+	font-weight: 200;
+}
+
+.trackList {
+	padding:0;
+}
+
+.trackListRow {
+	height: 40px;
+	padding: 15px 10px;
+	list-style: none;
+}
+
+.trackListRow span {
+	color: #ddd;
+	font-weight: 200;
+}
+
+.trackListRow:hover {
+	background-color: rgba(40, 40, 40, 0.3);
+}
+
+.trackListRow .trackCount {
+	width: 8%;
+	float: left;
+}
+
+.trackListRow .trackCount img {
+	width: 30px;
+	visibility: hidden;
+	position: absolute;
+	cursor: pointer;
+}
+
+.trackListRow:hover .trackCount img {
+	visibility: visible;
+}
+
+.trackListRow .trackCount span {
+	visibility: visible;
+}
+
+.trackListRow:hover .trackCount span {
+	visibility: hidden;
+}
+
+.trackListRow .trackInfo {
+	width: 75%;
+	float: left; 
+}
+
+.trackListRow .trackInfo span {
+	display: block;
+}
+
+.trackListRow .trackOptions {
+	width: 5%;
+	float: left;
+	text-align: right;
+}
+
+.trackListRow .trackOptions img {
+	width: 20px;
+	visibility: hidden;
+}
+
+.trackListRow:hover .trackOptions img {
+	visibility: visible;
+}
+
+.trackListRow .trackDuration {
+	width: 12%;
+	float: left;
+	text-align: right;
+}
+
+.trackListRow .trackInfo .trackName {
+	color: #fff;
+	margin-bottom: 7px;
+}
+
+.artistInfo {
+	text-align: center;
+}
+
+.button {
+	color: #fff;
+	background-color: transparent;
+	margin-bottom: 5px;
+	border: 2px solid #fff;
+	border-radius: 50px;
+	min-width: 100px;
+	font-weight: 500;
+	padding: 15px;
+	letter-spacing: 2px;
+
+}
+
+.button.green {
+	background-color: #2ebd59;
+	border-color: #2ebd59;
+}
+
+.borderBottom {
+	border-bottom: 1px solid #939393;
+	margin-bottom: 20px;
+}
+
+.trackListContainer h2,
+.gridViewContainer h2,
+.artistContainer h2 {
+	text-align: center;
+}
+
+[role="link"] {
+	cursor: pointer;
+}
+
+.searchContainer {
+	background-color: #24242477;
+	padding: 20px 28px;
+}
+
+.searchContainer h4 {
+	margin: 0;
+	font-weight: 300;
+}
+
+.searchContainer .searchInput {
+	width: 100%;
+	background-color: transparent;
+	border: none;
+	color: #fff;
+	font-weight: 700;
+	font-size: 62px;
+	letter-spacing: 2px;
+}
+
+input:focus {
+	 outline: none;
+ }
+
+.searchResultRow {
+	padding: 15px 10px;
+}
+
+.searchResultRow:hover {
+	background-color: #282828
+	;
+}
+
+.searchResultRow .artistName span {
+	color: #fff;
+}
+
+.noResults {
+	font-size: 18px;
+	margin: 15px;
+	display: block;
+}
+
+.buttonItems .button {
+	display: block;
+	margin: 0 auto 20px auto;
+}
+
+.playlistsContainer {
+	padding: 10px 0;
+}
+
+.playlistImage img {
+	border: 3px solid #404040;
+}
+
+.optionsMenu {
+	position: fixed;
+	background-color: #282828;
+	width: 200px;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	border-radius: 5px;
+	z-index: 1000;
+	display: none;
+}
+
+.optionsMenu .item {
+	width: 100%;
+	padding: 12px 20px;
+	box-sizing: border-box;
+	font-weight: 400;
+	color: rgba(147, 147, 147, 0.8);
+	cursor: pointer;
+	height: 40px;
+	background-color: #282828;
+	font-size: 14px;
+}
+
+.optionsMenu .item:hover {
+	color: #fff;
+	background-color: #333;
+	border-color: #333;
+}
+
+.optionsMenu select {
+	border: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+.userInfo h1 {
+	text-align: center;
+}
+
+.userDetails {
+	padding: 20px;
+}
+
+.userDetails .container h2 {
+	text-align: center;
+}
+
+.userDetails .container input[type="text"],
+.userDetails .container input[type="password"],
+.userDetails .container .button {
+	display: block;
+	margin: 16px auto;
+}
+
+.userDetails .container input[type="text"], 
+.userDetails .container input[type="password"] {
+	height: 50px;
+	width: 52%;
+	background-color: #3434348c;
+	border: none;
+	border-radius: 15px;
+	font-size: 18px;
+	font-weight: 300;
+	padding: 0 20px;
+}
+
+.userDetails .container .message {
+	color: #2ebd59;
+	font-weight: 300;
+}
+
+.albumList {
+	list-style: none;
+	margin-left: -35px;
+	margin-bottom: 5px;
+}
+
+.albumList .albumItem {
+	text-align: center;
+}
+
+.albumList .albumItem:hover {
+	color: #d7f58c;
+}
+
+.artistHeading {
+	width: 26%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.extraLink:hover {
+	cursor: pointer;
+}
+

@@ -1,0 +1,57 @@
+# db slotify
+
+## tables
+
+- albums
+  - id            INT AUTO_INCREMENT PRIMARY KEY
+	- title         VARCHAR(250)
+	- artist        INT
+	- genre         INT
+	- artworkPath   VARCHAR(500)
+
+- artists
+  - id            INT AUTO_INCREMENT PRIMARY KEY
+  - genre         VARCHAR(50)
+	- name          VARCHAR(50)
+
+- genres
+  - id            INT AUTO_INCREMENT PRIMARY KEY
+  - name          VARCHAR(50)
+	- imagePath     VARCHAR(500)
+
+- playlists
+  - id            INT AUTO_INCREMENT PRIMARY KEY
+  - name          VARCHAR(50)
+	- owner         VARCHAR(50)
+	- dateCreated   DATETIME
+
+- playlistSongs
+  - id            INT AUTO_INCREMENT PRIMARY KEY
+  - songId        INT
+	- playlistId    INT
+	- playlistOrder INT
+
+- songs
+  - id            INT AUTO_INCREMENT PRIMARY KEY
+  - title         VARCHAR(250)
+	- artist        INT
+	- album         INT
+	- genre         INT
+	- duration      VARCHAR(8)
+	- path          VARCHAR(500)
+	- albumOrder    INT
+	- plays         INT
+
+users
+  - id            INT AUTO_INCREMENT PRIMARY KEY
+  - username      VARCHAR(25)
+	- firstName     VARCHAR(50)
+	- lastName      VARCHAR(50)
+	- email         VARCHAR(200)
+	- password      VARCHAR(32)
+	- signUpDate    DATETIME
+	- profilePic    VARCHAR(500)
+
+
+
+

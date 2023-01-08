@@ -1,0 +1,153 @@
+html,
+body {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+}
+
+#background {
+	background-color: #000;
+	/* background-image: url("../images/bg.jpeg"); */
+	background-image: url("../images/otherBackgrounds/bg9.jpg");
+	background-position: center;
+	background-size: cover;
+	display: table;
+	height: 100%;
+	width: 100%;	
+}
+
+#loginContainer * {
+	color: #fff;
+	font-family: "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+	font-weight: normal;
+	line-height: 1em;
+	box-sizing: border-box;
+}
+
+#loginContainer {
+	width:80%;
+	margin: 40px auto;
+	position: relative;
+	max-width: 1024px;
+}
+
+:-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #aaa;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #aaa;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #aaa;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #aaa;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+   color:    #aaa;
+}
+
+::placeholder { /* Most modern browsers support this now. */
+   color:    #aaa;
+}
+
+#inputContainer {
+	width: 400;
+    padding: 45px;
+    float: left;
+    border-right: 1px solid #fff;
+}
+
+#inputContainer h2 {
+	text-align: center;
+}
+
+#inputContainer input[type="text"], 
+input[type="email"], 
+input[type="password"] {
+	display: block;
+	font-size: 16px;
+	background-color: transparent;
+	border: 0;
+	border-bottom: 1px solid #fff;
+	height: 27px;
+	line-height: 27px;
+	margin-top: 5px;
+	width: 100%;
+}
+
+#inputContainer label {
+	color: #fff;
+	display: block;
+	font-size: 14px;
+	margin-top: 5px;
+}
+
+#inputContainer button {
+	background-color: transparent;
+	border: 2px solid #fff;
+	border-radius: 20px;
+	color: #fff;
+	display: block;
+	font-size: 14px;
+	letter-spacing: 2px;
+	margin: 10px auto;
+	height: 41px;
+	padding: 5px;
+	width: 100%;
+}
+
+#inputContainer button:hover {
+	cursor: pointer;
+}
+
+.hasAccount {
+	text-align: center;
+}
+
+.hasAccount span {
+	font-weight: bold;
+	font-size: 13px;
+	cursor: pointer;
+}
+
+#inputContainer .errorMessage {
+	color: #f79b3e;
+	font-size: 14px;
+	display: block;
+}
+
+#registerForm,
+#loginForm {
+	display: none;
+}
+
+#loginText {
+	padding: 45px;
+	display: table-cell;
+}
+
+#loginText h1 {
+	color: #07d159;
+	font-size: 60px;
+	font-weight: bold;
+}
+
+#loginText h2 {
+	margin: 35px 0;
+}
+
+#loginText ul {
+	padding: 0;
+}
+
+#loginText li {
+	font-size: 18px;
+	padding: 8px 35px;
+	list-style-type: none;
+	background: url(../images/icons/devil.png) no-repeat;
+	background-size: 24px;
+}
+
