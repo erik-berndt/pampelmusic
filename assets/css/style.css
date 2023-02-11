@@ -1,3 +1,9 @@
+* {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: #fff;
+	letter-spacing: 1px;
+}
+
 html, body {
 	padding: 0;
 	margin: 0;
@@ -12,12 +18,6 @@ body {
 	background-attachment: fixed;
 	font-size: 14px;
 	min-width: 720px;
-}
-
-* {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	color: #fff;
-	letter-spacing: 1px;
 }
 
 #nowPlayingBarContainer {
@@ -172,7 +172,7 @@ body {
 }
 
 #navBarContainer {
-	background-color: rgba(0, 0, 0, 0.3);;
+	background-color: rgba(0, 0, 0, 0.3);
 	width: 220px;
 	height: 100vh;
 	position: fixed;
@@ -271,7 +271,6 @@ body {
 	font-size: 16px;
 	text-align: center;
 	padding: 10px 5px;
-	/* border: 1px solid #939393; */
 	border-radius: 20px;
 	text-overflow: ellipsis;
     overflow: hidden;

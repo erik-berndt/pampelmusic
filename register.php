@@ -28,6 +28,7 @@ function getInputValue($name) {
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="assets/css/register.css" rel="stylesheet" type="text/css">
+	<link href="assets/images/favicon/favicon.ico" rel="icon">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script src="assets/js/register.js"></script>
 	<title></title>
